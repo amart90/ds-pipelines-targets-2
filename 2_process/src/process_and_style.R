@@ -1,3 +1,4 @@
+# Rename and remove unnecessary columns
 process_data <- function(nwis_data){
   nwis_data_clean <- rename(nwis_data, water_temperature = X_00010_00000) %>% 
     select(-agency_cd, -X_00010_00000_cd, -tz_cd)
@@ -5,6 +6,7 @@ process_data <- function(nwis_data){
   return(nwis_data_clean)
 }
 
+# Add site characteristic data
 annotate_data <- function(site_data_clean, site_filename){
   site_info <- read_csv(site_filename, show_col_types = FALSE)
   annotated_data <- left_join(site_data_clean, site_info, by = "site_no") %>% 
