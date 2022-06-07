@@ -19,8 +19,9 @@ download_nwis_site_data <- function(site_num, fileout, parameterCd = '00010', st
 }
 
 # Read download CSVs and bind them into a single data frame
-combine_csvs <- function(csv){
-  lapply(csv, read_csv, show_col_types = FALSE) %>% 
+#input_csv argument should be a vector of nwis data csv file paths
+combine_csvs <- function(input_csvs){
+  lapply(input_csvs, read_csv, show_col_types = FALSE) %>% 
     bind_rows()
 }
 
