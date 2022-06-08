@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 
-_targets/*
+_targets/
+*/out/*
+!*/out/empty
