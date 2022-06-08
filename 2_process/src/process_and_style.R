@@ -1,4 +1,4 @@
-process_data <- function(filein, site_filename){
+process_data <- function(nwis_data, site_filename){
   site_info <- read_csv(site_filename, show_col_types = FALSE)
   
   nwis_data_clean <- rename(filein, water_temperature = X_00010_00000) %>% 
