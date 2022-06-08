@@ -41,7 +41,7 @@ p1_targets_list <- list(
 p2_targets_list <- list(
   tar_target(
     site_data_processed, 
-    process_data(filein = site_data, site_filename = site_info_csv)
+    process_data(nwis_data = site_data, site_filename = site_info_csv)
   )
 )
 
