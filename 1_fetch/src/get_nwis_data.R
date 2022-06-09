@@ -1,5 +1,4 @@
 # Download site data from USGS site file site
-# Save output as CSV
 download_nwis_site_data <- function(site_num, parameterCd = '00010', startDate="2014-05-01", endDate="2015-05-01"){
 
   # readNWISdata is from the dataRetrieval package
