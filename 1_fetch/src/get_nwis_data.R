@@ -18,7 +18,7 @@ download_nwis_site_data <- function(site_num, parameterCd = '00010', startDate="
 }
 
 # Read download CSVs and bind them into a single data frame
-#input_csv argument should be a list of nwis site data in dataframes (or similar)
+# `input` argument should be a list of nwis site data in dataframes (or similar)
 combine_data <- function(input, fileout){
     bind_rows(input) %>%
     write_csv(file = fileout)
